@@ -128,9 +128,9 @@ wsServer.on("request", (request) =>{
 });
 
 const emitNewPoint = (currency, message = "new-point") => {
-  const point = generateNewRandomPoint(pair.id)
+  const point = generateNewRandomPoint(currency)
 
-  subscriptions[pair.id].forEach((conn) => {
+  subscriptions[currency].forEach((conn) => {
     conn.send(JSON.stringify({
       currency,
       detail: "current-exchange",
@@ -142,6 +142,6 @@ const emitNewPoint = (currency, message = "new-point") => {
 
 AVAILABLE_PAIRS.filter((pair) => pair.id != "CHFMXN").forEach((pair) => {
   setInterval(() => {
-    emitNewPoint(pair)
+    emitNewPoint(pair.id)
   }, 3000)
 })
