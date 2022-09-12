@@ -127,7 +127,7 @@ wsServer.on("request", (request) =>{
   setTimeout(() => connection.close(), randomMinutesDisconnect * 1000 * 60)
 });
 
-const emitNewPoint = (currency, message = "new-point") => {
+const emitNewPoint = (currency, message = "update") => {
   const point = generateNewRandomPoint(currency)
 
   subscriptions[currency].forEach((conn) => {
