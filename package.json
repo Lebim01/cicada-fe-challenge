@@ -1,0 +1,19 @@
+{
+  "name": "challenge-mtrade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "uuidv4": "^6.2.13",
+    "websocket": "^1.0.34",
+    "ws": "^8.8.1"
+  }
+}
